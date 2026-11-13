@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prajanya – Portfolio</title>
+  <meta name="description" content="Portfolio of Prajanya, a BCA graduate who enjoys learning, exploring technology and building projects.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <a class="logo" href="#home">Prajanya</a>
+    <nav aria-label="Main">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#interests">Interests</a>
+      <a href="#journey">Journey</a>
+      <a href="#contact">Contact</a>
+      <button id="theme" type="button" aria-label="Switch to dark theme">Dark</button>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <h1>Hey, I'm Prajanya. Glad you're here.</h1>
+      <p class="lede">I'm someone who loves exploring new ideas, learning new things, and turning imagination into reality. I enjoy creating things, solving problems, and discovering something new every day.</p>
+      <p class="lede">This is my little corner of the internet where I share my journey, my work, and the things I'm passionate about.</p>
+      <div class="actions">
+        <a class="btn" href="#work">Explore My Work</a>
+        <a class="btn ghost" href="#about">Get to Know Me</a>
+      </div>
+    </section>
+
+    <section id="work">
+      <h2>Things I've Created.</h2>
+      <p class="intro">A collection of projects, ideas, and experiments I've worked on. Each one has taught me something new and helped me grow.</p>
+      <ul id="projects" class="projects"></ul>
+    </section>
+
+    <section id="about">
+      <h2>A Little About Me.</h2>
+      <p>Hey! I'm Prajanya.</p>
+      <p>I'm a BCA graduate who enjoys learning, exploring technology, and creating things that make an idea come to life.</p>
+      <p>I believe that learning never really stops. I'm always interested in discovering new things, improving myself, and taking on challenges that help me grow.</p>
+      <p>I enjoy the journey of figuring things out, experimenting with ideas, and seeing progress one step at a time.</p>
+      <p>Outside of learning and creating, I love spending time doing things that inspire me and keep me curious.</p>
+    </section>
+
+    <section id="interests">
+      <h2>Things I Enjoy Exploring.</h2>
+      <dl class="interests">
+        <dt>Creative Thinking</dt><dd>Exploring ideas and finding different ways to approach problems.</dd>
+        <dt>Technology</dt><dd>Understanding how digital things work.</dd>
+        <dt>Building Projects</dt><dd>Turning concepts into practical applications.</dd>
+        <dt>Continuous Learning</dt><dd>Improving my knowledge and discovering new skills.</dd>
+        <dt>Problem Solving</dt><dd>Enjoying the process of finding solutions.</dd>
+      </dl>
+      <h3>Tools &amp; Technologies</h3>
+      <ul class="skills">
+        <li>Java</li><li>Python</li><li>PHP</li><li>SQL</li><li>HTML</li><li>CSS</li><li>JavaScript</li><li>JDBC</li><li>Hibernate</li><li>Spring</li>
+      </ul>
+    </section>
+
+    <section id="journey">
+      <h2>Every Step Counts.</h2>
+      <ol class="timeline">
+        <li><strong>Education</strong> BCA graduate, Mahatma Gandhi Memorial College, Udupi (2023–2026)</li>
+        <li><strong>Learning</strong> Exploring programming and technology</li>
+        <li><strong>Practice</strong> Building practical projects</li>
+        <li><strong>Today</strong> Learning, creating and growing</li>
+      </ol>
+    </section>
+
+    <section id="contact">
+      <h2>Let's Connect!</h2>
+      <p>Have an interesting idea, want to collaborate, or just want to say hello? I'd love to hear from you. Feel free to reach out!</p>
+      <ul class="contact-links">
+        <li>Email: <a href="mailto:poojaryprajanya117@gmail.com">poojaryprajanya117@gmail.com</a></li>
+        <!-- TODO: replace your-username with your real GitHub and LinkedIn names -->
+        <li>GitHub: <a href="https://github.com/prajanyapoojary56-ops">github.com/prajanyapoojary56-ops</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/prajanya-bangera">linkedin.com/in/prajanya-bangera</a></li>
+      </ul>
+      <form id="form" novalidate>
+        <label>Name <input id="name" name="name" autocomplete="name" required></label>
+        <label>Email <input id="email" name="email" type="email" autocomplete="email" required></label>
+        <label>Message <textarea id="msg" name="message" rows="4" required></textarea></label>
+        <button class="btn" type="submit">Send message</button>
+        <p id="result" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with curiosity and a little creativity by Prajanya.</p>
+    <p>© 2026 Prajanya. All rights reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+<

@@ -1,0 +1,131 @@
+/* Palette: Navy #2F4156 · Teal #567C8D · Sky Blue #C8D9E6 · Beige #F5EFEB · White #FFFFFF */
+:root {
+  --ink: #2f4156;
+  --muted: #3f5d6c;
+  --teal: #567c8d;
+  --line: #c8d9e6;
+  --card: #ffffff;
+  --on-ink: #f5efeb;
+  --band-hero: #c8d9e6;
+  --band-a: #f5efeb;
+  --band-b: #ffffff;
+  --band-c: #c8d9e6;
+  --band-dark: #2f4156;
+}
+:root[data-theme="dark"] {
+  --ink: #eef3f7;
+  --muted: #b2c3d0;
+  --line: #3c5163;
+  --card: #2b3c4f;
+  --on-ink: #1d2a38;
+  --band-hero: #2f4156;
+  --band-a: #1d2a38;
+  --band-b: #243445;
+  --band-c: #2f4156;
+  --band-dark: #121b25;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; overflow-x: hidden;
+  font-family: "DM Sans", system-ui, sans-serif;
+  background: var(--band-a);
+  color: var(--ink);
+  line-height: 1.7;
+}
+a { color: var(--ink); font-weight: 500; text-decoration-color: var(--teal); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+
+h1, h2, h3, .logo { font-family: "DM Serif Display", Georgia, serif; font-weight: 400; }
+h1 { font-size: clamp(2.8rem, 9vw, 4.6rem); line-height: 1.04; margin: 0 0 24px; max-width: 13ch; }
+h2 { font-size: 2.2rem; line-height: 1.15; margin: 0 0 20px; }
+h3 { font-size: 1.45rem; margin: 0 0 4px; }
+p { margin: 0 0 16px; }
+
+/* Full-width colour bands behind a centred column */
+.top, section, footer {
+  background: var(--band);
+  box-shadow: 0 0 0 100vmax var(--band);
+  clip-path: inset(0 -100vmax);
+}
+.top { --band: var(--band-hero); }
+footer { --band: var(--band-dark); }
+main { max-width: 680px; margin: 0 auto; padding: 0 24px; }
+.top, footer { max-width: 680px; margin: 0 auto; padding-left: 24px; padding-right: 24px; }
+
+.top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; padding-top: 24px; padding-bottom: 8px; }
+.logo { font-size: 1.7rem; color: var(--ink); text-decoration: none; }
+nav { display: flex; flex-wrap: wrap; gap: 6px 22px; align-items: center; font-size: 0.95rem; }
+nav a { text-decoration: none; font-weight: 500; }
+nav a:hover { text-decoration: underline; text-decoration-color: var(--teal); }
+#theme {
+  font: inherit; font-size: 0.85rem; font-weight: 500; padding: 3px 14px; border-radius: 999px;
+  border: 1px solid var(--teal); background: transparent; color: var(--ink); cursor: pointer;
+}
+#theme:hover { background: var(--ink); color: var(--on-ink); }
+
+section { padding: 72px 0; color: var(--ink); }
+.hero { --band: var(--band-hero); padding-top: 56px; padding-bottom: 88px; }
+#work, #interests { --band: var(--band-a); }
+#about { --band: var(--band-b); }
+#journey { --band: var(--band-c); }
+.lede { color: var(--muted); max-width: 52ch; font-size: 1.1rem; }
+.intro { color: var(--muted); max-width: 54ch; margin: 0 0 28px; }
+
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+.btn {
+  display: inline-block; font: inherit; font-weight: 600; font-size: 0.95rem; padding: 11px 26px;
+  background: var(--ink); color: var(--on-ink); text-decoration: none; cursor: pointer;
+  border: 1px solid var(--ink); border-radius: 999px;
+}
+.btn:hover { background: var(--teal); border-color: var(--teal); color: #fff; }
+.btn.ghost { background: transparent; color: var(--ink); border-color: var(--teal); }
+.btn.ghost:hover { background: var(--ink); border-color: var(--ink); color: var(--on-ink); }
+
+.projects { list-style: none; margin: 0; padding: 0; display: grid; gap: 24px; grid-template-columns: 1fr; }
+.projects li { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 22px; }
+.projects li:hover { border-color: var(--teal); }
+.projects img { display: block; width: 100%; max-height: 220px; object-fit: cover; border-radius: 8px; margin-bottom: 16px; }
+.projects p { color: var(--muted); margin: 0 0 8px; }
+.projects .kind { font-size: 0.9rem; margin-bottom: 10px; }
+.stack { display: block; font-size: 0.9rem; color: var(--muted); }
+.links { display: flex; gap: 20px; margin-top: 14px; }
+
+.interests { display: grid; grid-template-columns: 11rem 1fr; gap: 14px 24px; margin: 0 0 8px; }
+.interests dt { font-weight: 600; }
+.interests dd { margin: 0; color: var(--muted); }
+.interests + h3 { margin-top: 40px; }
+.skills { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 12px 0 0; }
+.skills li { padding: 3px 16px; border: 1px solid var(--teal); border-radius: 999px; font-size: 0.95rem; font-weight: 500; }
+
+.timeline { list-style: none; margin: 0; padding: 0; }
+.timeline li { display: grid; grid-template-columns: 11rem 1fr; gap: 4px 24px; padding: 16px 0; border-top: 1px solid var(--teal); color: var(--muted); }
+.timeline li:first-child { border-top: 0; padding-top: 0; }
+.timeline strong { color: var(--ink); font-weight: 600; }
+
+/* Contact sits on the dark band, so its colours flip */
+#contact { --band: var(--band-dark); --ink: #f5efeb; --muted: #c8d9e6; --on-ink: #2f4156; --teal: #8fb0c2; }
+#contact p { color: var(--muted); }
+.contact-links { list-style: none; padding: 0; margin: 0 0 32px; color: var(--muted); }
+form { display: grid; gap: 16px; max-width: 460px; }
+label { display: grid; gap: 4px; font-size: 0.95rem; font-weight: 500; }
+input, textarea {
+  font: inherit; font-weight: 400; padding: 10px 12px; border: 1px solid #567c8d; border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08); color: #f5efeb;
+}
+input:focus, textarea:focus { border-color: #c8d9e6; }
+input[aria-invalid="true"], textarea[aria-invalid="true"] { border-color: #ffb4a2; }
+#result { margin: 0; min-height: 1.5em; color: #c8d9e6; }
+
+footer { --ink: #f5efeb; --muted: #c8d9e6; padding-top: 28px; padding-bottom: 48px; color: var(--muted); font-size: 0.9rem; }
+footer p { margin: 2px 0; }
+
+@media (max-width: 560px) {
+  .interests, .timeline li { grid-template-columns: 1fr; }
+  .interests { gap: 2px; }
+  .interests dd { margin-bottom: 14px; }
+  section { padding: 52px 0; }
+  .hero { padding-top: 40px; padding-bottom: 60px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
